@@ -1,5 +1,31 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+//TODO: importar classe scanner
+import java.util.Scanner;
+
+public class ContaTerminal {
+    public static void main(String[] args) {
+        // TODO:exibir as mensagens para o usuario.
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Porfavor, digite o número da Agência: ");
+        String agencia = scanner.nextLine();
+    
+        System.out.print("Por favor, digite o número da Conta: ");
+        int numero = scanner.nextInt();
+        scanner.nextLine(); // Limpar o buffer do scanner
+    
+        System.out.print("Por favor, digite o nome do Cliente: ");
+        String nomeCliente = scanner.nextLine();
+    
+        System.out.print("Por favor, digite o saldo da conta: ");
+        double saldo = scanner.nextDouble();
+    
+        // Exibir mensagem final com os dados inseridos pelo usuário
+        System.out.println("Olá " + nomeCliente + 
+        ", obrigado por criar uma conta em nosso banco, sua agência é " 
+        + agencia + ", conta " + numero + " e seu saldo " + saldo + 
+        " já está disponível para saque.");
+        
+        // Fechar o scanner
+        scanner.close();
     }
 }
